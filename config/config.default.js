@@ -16,12 +16,15 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1603250852860_6363';
 
   // add your middleware config here
-  config.middleware = ["errorHandler"];
+  config.middleware = ["errorHandler",'auth'];
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
   };
+  config.auth = {
+    match: ['/logout','/upload','/getSize','/file','/share'],
+  }
   config.security = {
     // 关闭 csrf
     csrf: {
@@ -65,6 +68,20 @@ module.exports = appInfo => {
   };
   config.crypto = {
     secret:  'qhdgw@45ncashdaksh2!#@3nxjdas*_672'
+  };
+  
+ // redis存储
+ config.redis = {
+  client: {
+    port: 6379, // Redis port
+    host: '127.0.0.1', // Redis host
+    password: '',
+    db: 1,
+  }
+  };
+  
+config.jwt = {
+  secret: 'qhdgw@45ncashdaksh2!#@3nxjdas*_672',
 };
   return {
     ...config,
