@@ -13,4 +13,5 @@ module.exports = (app) => {
   router.post('/upload', controller.file.upload);
   router.get('/getsize', controller.user.getSize);
   router.get('/file', controller.file.list);
+  router.post('/file/createdir', controller.file.createdir);
 };
