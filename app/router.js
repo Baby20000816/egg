@@ -19,4 +19,5 @@ module.exports = (app) => {
   router.get('/file/search', controller.file.search);
   router.post('/share/create', controller.share.create);
   router.get('/share/list', controller.share.list);
+  router.get('/share/:sharedurl', controller.share.read);
 };
