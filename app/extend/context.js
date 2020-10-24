@@ -14,12 +14,12 @@ module.exports = {
   getToken(value) {
     return this.app.jwt.sign(value, this.app.config.jwt.secret);
   },
-  // 生成唯一ID
-  genID(length) {
-    return Number(
-      Math.random().toString().substr(3, length) + Date.now()
-    ).toString(36);
-  },
+// 生成唯一idgenID(length) 
+genID(length) {
+  return Number(
+    Math.random().toString().substr(3, length) + Date.now()
+  ).toString(36)
+},
   // 是否是移动端访问
   ismobile() {
     const userAgent = this.request.header['user-agent'].toLowerCase();

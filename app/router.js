@@ -10,4 +10,5 @@ module.exports = (app) => {
   router.post("/reg", controller.user.reg);
   router.post("/login", controller.user.login);
   router.post('/logout', controller.user.logout);
+  router.post('/upload', controller.file.upload);
 };
