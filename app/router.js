@@ -17,4 +17,5 @@ module.exports = (app) => {
   router.post('/file/rename', controller.file.rename);
   router.post('/file/delete', controller.file.delete);
   router.get('/file/search', controller.file.search);
+  router.post('/share/create', controller.share.create);
 };
