@@ -15,4 +15,5 @@ module.exports = (app) => {
   router.get('/file', controller.file.list);
   router.post('/file/createdir', controller.file.createdir);
   router.post('/file/rename', controller.file.rename);
+  router.post('/file/delete', controller.file.delete);
 };
