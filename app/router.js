@@ -11,4 +11,5 @@ module.exports = (app) => {
   router.post("/login", controller.user.login);
   router.post('/logout', controller.user.logout);
   router.post('/upload', controller.file.upload);
+  router.get('/getsize', controller.user.getSize)
 };
